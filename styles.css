@@ -1,0 +1,362 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 55vw;
+  height: 100vh;
+
+  background-color: #111111;
+  margin: 0;
+}
+
+h1 {
+  position: relative;
+  font-size: 110px;
+  color: white;
+}
+
+h1:hover {
+  animation: blink 0.01s infinite;
+
+  background: -webkit-linear-gradient(rgb(245, 0, 127), rgb(213, 4, 4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes blink {
+  10% {
+    scale: 1.1;
+  }
+  0% {
+    background: -webkit-linear-gradient(rgb(233, 40, 72), rgb(206, 71, 8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  30% {
+    background: -webkit-linear-gradient(rgb(1, 7, 132), rgb(38, 15, 84));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+h3 {
+  font-size: 15px;
+  margin-top: -2vh;
+  color: white;
+}
+
+.cv {
+  width: 135px;
+  height: 50px;
+}
+
+.profil {
+  width: 170px;
+  height: 50x;
+}
+
+.end {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  position: relative;
+  color: white;
+  border: 2px solid;
+  border-color: rgb(154, 149, 149);
+  background-color: transparent;
+  gap: 16px;
+}
+
+.mail {
+  color: gray;
+  padding-left: 10%;
+}
+
+.logo {
+  width: 7%;
+  margin-top: 4%;
+  object-fit: cover;
+  padding-left: 10%;
+}
+
+button:hover {
+  background-color: rgb(245, 0, 127);
+  color: white;
+  border-color: blue;
+}
+
+.right {
+  height: 100vh;
+  width: 45vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  padding-left: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  height: 370px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.4px);
+  -webkit-backdrop-filter: blur(9.4px);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.informations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  color: white;
+}
+
+h2 {
+  font-size: 25px;
+  color: white;
+}
+
+p {
+  font-size: 14px;
+}
+
+.profil-photo {
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.video-back {
+  object-fit: cover;
+  position: absolute;
+  width: 45vw;
+  height: 100vh;
+}
+
+.grain-back {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent
+    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation 0.2s infinite;
+  opacity: 0.9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+.first {
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+  .video-back {
+    object-fit: cover;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .left {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    margin: 0;
+  }
+
+  .right {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .grain-back {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200vw;
+    height: 170vh;
+    background: transparent
+      url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation 0.2s infinite;
+    opacity: 0.9;
+    visibility: visible;
+  }
+  .logo {
+    display: flex;
+
+    object-fit: cover;
+    padding-left: 35px;
+    width: 40px;
+  }
+
+  .text {
+    display: flex;
+
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mail {
+    padding-left: 35px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+  .video-back {
+    object-fit: cover;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .left {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+  }
+
+  .right {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .grain-back {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200vw;
+    height: 170vh;
+    background: transparent
+      url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation 0.2s infinite;
+    opacity: 0.9;
+    visibility: visible;
+  }
+  .logo {
+    display: flex;
+    text-align: left;
+    padding-left: 15px;
+    width: 8%;
+  }
+
+  .text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mail {
+    padding-left: 15px;
+  }
+}
